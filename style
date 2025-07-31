@@ -1,0 +1,96 @@
+/* Fonts */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Colors */
+:root {
+  --gold: #d4af37;
+  --pink: #fce4ec;
+  --cream: #fffaf5;
+}
+.text-gold {
+  color: var(--gold);
+}
+.bg-gold {
+  background-color: var(--gold);
+}
+
+/* Gate Panels */
+.gate-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: var(--gold);
+  top: 0;
+  z-index: 10;
+  transition: transform 1.5s ease;
+}
+.gate-panel.left {
+  left: 0;
+}
+.gate-panel.right {
+  right: 0;
+}
+.gate-panel.left.open {
+  transform: translateX(-100%);
+}
+.gate-panel.right.open {
+  transform: translateX(100%);
+}
+
+.open-btn {
+  z-index: 20;
+  padding: 12px 24px;
+  background: white;
+  color: var(--gold);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  position: relative;
+}
+
+/* Main Layout */
+.event-card {
+  background: white;
+  padding: 1.5rem;
+  border-left: 5px solid var(--gold);
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Maps */
+.map-iframe {
+  width: 100%;
+  height: 200px;
+  border: 0;
+  margin: 1rem 0;
+}
+.map-btn {
+  background: var(--gold);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* Slider */
+.slider-img {
+  width: 100%;
+  flex-shrink: 0;
+}
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--gold);
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  z-index: 10;
+  border-radius: 9999px;
+}
